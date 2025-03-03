@@ -1,0 +1,40 @@
+/* Bouton Scroll to top */
+.scroll-to-top{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgb(255, 255, 255, 0.2);
+    transition: opacity 0.3s ease, tranform 0.3s ease;
+    display: none;
+}
+
+/* Apparitiondu bouton lorsqu'on scroll */
+.scroll-to-top.show{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Effet du scroll */
+.scroll-to-top:hover{
+    background: #ffc107;
+}
+
+@media (max-width: 768px){
+    .scroll-to-top{
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+}

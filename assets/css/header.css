@@ -9,7 +9,7 @@
     align-items: center;
     padding: 0 20px;
     z-index: 1000;
-    
+    background: red;
 }
 
 /* LOGO */
@@ -56,6 +56,7 @@
 /* MENU */
 .navbar__menu{
     position: fixed;
+    z-index: 1000;
     top: 0;
     right: -100%;
     width: 100%;
@@ -66,7 +67,7 @@
     justify-content: center;
     align-items: center;
     transition: right 0.4s ease;
-    margin-top: 20px;
+    padding: 20px;
 }
 
 .navbar__menu li{
@@ -78,12 +79,34 @@
     font-weight: 700;
     color: var(--accent-color);
     text-transform: uppercase;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease;  
+    position: relative;  
+    display: inline-block; /* important pour que le ::after corresponde au texte */
+
 }
 
-.navbar__menu a:hover{
-    color: white;
+.navbar__menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* distance entre texte et trait */
+    width: 0%;
+    height: 2px; /* épaisseur du trait */
+    background-color: var(--text-color); /* couleur du trait */
+    transition: width 0.3s ease;
 }
+
+.navbar__menu a:hover::after {
+    width:100%; /* le trait s'étend sur toute la largeur du lien */
+}
+
+.navbar__menu a:hover {
+    color: var(--text-color); /* optionnel : changer couleur texte au hover */
+}
+
+
+
+
 
 /* MENU OUVERT */
 .nav-active{
@@ -114,7 +137,7 @@
         position: fixed;
         width: auto;
         height: auto;
-        background: transparent;
+        background: white;
         flex-direction: row;
         top: 0;
         left: 0;

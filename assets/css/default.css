@@ -2,9 +2,10 @@
 
 :root{
     --primary-color: #fff;
-    --text-color: #000;
-    --accent-color: rgb(206, 255, 0);
-    --bg-color: #fff;
+    --text-color: #83C5BE;
+    --accent-color: #FFDDD2;
+    --bg-color: #EDF6F9;
+    --button-color: #E29578;
 }
 
 body{
@@ -21,7 +22,8 @@ html{
 }
 
 h1, h2, h3{
-    margin: 0,
+    margin: 0;
+    font-size: 2rem;
 }
 
 a{

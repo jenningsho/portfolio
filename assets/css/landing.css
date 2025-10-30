@@ -19,7 +19,6 @@
 }
 
 .hero__content h1{
-    font-size: 2rem;
     font-weight: bold;
 }
 
@@ -37,7 +36,6 @@
     padding: 10px 20px;
     font-size: 1rem;
     background: var(--accent-color);
-    color: #000;
     text-decoration: none;
     font-weight: bold;
     margin-top: 20px;
@@ -46,7 +44,7 @@
 }
 
 .btn:hover{
-    background: #ffc107;
+    background: var(--button-color);
 }
 
 .hero__image img{
@@ -70,13 +68,17 @@
         padding: 80px;
         gap: 80px;
     }
-
+    
     .hero__content{
         flex: 1;
         align-items: flex-start;
         gap: 30px;
     }
-
+    
+    .hero__content h1{
+        font-size: 4rem;
+    }
+    
     .hero__image{
         flex: 1;
         display: flex;
